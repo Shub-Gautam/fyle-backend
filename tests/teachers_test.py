@@ -19,6 +19,8 @@ def test_get_assignments_teacher_2(client, h_teacher_2):
 
     assert response.status_code == 200
 
+    # print(response.json['data'])
+
     data = response.json['data']
     for assignment in data:
         assert assignment['teacher_id'] == 2

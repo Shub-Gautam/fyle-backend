@@ -1,5 +1,8 @@
 from core import db
 from core.libs import helpers
+from core.apis.decorators import AuthPrincipal
+# from core.libs import helpers, assertions
+# from sqlalchemy.types import Enum as BaseEnum
 
 
 class Teacher(db.Model):
@@ -11,3 +14,7 @@ class Teacher(db.Model):
 
     def __repr__(self):
         return '<Teacher %r>' % self.id
+
+    @classmethod
+    def get_assignments_by_teacher(cls):
+        return cls.query.all()

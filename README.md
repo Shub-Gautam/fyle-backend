@@ -52,7 +52,7 @@ bash run.sh
 ```
 pytest -vvv -s tests/
 
-# for test coverage report
-# pytest --cov
-# open htmlcov/index.html
+ for test coverage report
+ pytest --cov
+ open htmlcov/index.html
 ```
